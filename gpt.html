@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: "Raleway", sans-serif;
+            background-color: #111;
+            color: white;
+        }
+    
+        img {
+            width: 40px;
+            filter: invert(1);
+        }
+    
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: black;
+            color: white;
+            font-size: 12px;
+            padding: 10px;
+        }
+    
+        .lhs {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    
+        .rhs {
+            display: flex;
+            gap: 8px;
+        }
+    
+        .intro {
+            display: flex;
+            position: relative;
+            gap: 10px;
+            padding: 100px 0;
+            color: white;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-image: url('assets/images/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    
+        .intro .description {
+            width: 300px;
+            font-size: 10px;
+            line-height: 18px;
+            color: #c2c2c2;
+        }
+    
+        .intro button {
+            border: 0;
+            color: white;
+            font-size: 9px;
+            border-radius: 10px;
+            background-color: #b49326;
+            padding: 4px 10px;
+            cursor: pointer;
+        }
+    
+        .intro-details {
+            position: relative;
+            z-index: 11;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+    
+        .transparent-layer {
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0.5;
+        }
+        .what-we-do {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        .what-we-do h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+        .what-we-do p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .what-we-do .flourish {
+            font-size: 40px;
+            color: #000;
+        }
+
+    
+        .cards-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: white;
+            color: black;
+        }
+    
+        .cards-section button {
+            background-color: #b49326;
+            color: white;
+            border: none;
+            padding: 6px 16px;
+            font-size: 10px;
+            margin-top: 30px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    
+        /* ✅ ADDED THIS — responsive flex layout for cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    
+        /* ✅ CLEANED AND CONSOLIDATED card styling */
+        .card {
+        background-color: #f0f0f0;
+        color: black;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+        width: 180px; /* ✅ Updated from 220px to 200px */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+    
+        .card img {
+            width: 60px;
+            margin-bottom: 16px;
+            filter: none;
+        }
+    
+        .card h3 {
+            margin: 10px 0 12px;
+            font-size: 16px;
+            color: black;
+        }
+    
+        .card p {
+            font-size: 12px;
+            color: #333;
+        }
+        .decorative-break {
+    text-align: center;
+    background-color: white;
+    padding: 20px 0;
+}
+
+.decorative-break {
+    text-align: center;
+    background-color: white;
+    padding: 20px 0;
+}
+
+.decorative-break img {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+    opacity: 1;
+    filter: none; /* Make sure this is removed */
+}
+
+
+
+    </style>
+    
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="lhs">
+            <img src="assets/images/apple.png">
+            <span>App Name</span>
+        </div>
+        <div class="rhs">
+            <span>Menu 1</span>
+            <span>Menu 2</span>
+            <span>Menu 3</span>
+            <span>Menu 4</span>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <div class="intro">
+        <div class="transparent-layer"></div>
+        <div class="intro-details">
+            <span>We will design what you think</span>
+            <div class="description">
+                We turn imaginary ideas into realism that you see in front of your eyes and just think about the design and colors you prefer.
+            </div>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <!-- What we do section -->
+    <section class="what-we-do">
+        <h2>What We Do?</h2>
+        <p>
+          We are preparing an idea for the application first and then we draw a wire frame for the application screens 
+          until we see the application realistically before we start design and create prototype.
+        </p>
+        
+    </section>
+    <!-- Decorative flourish before cards -->
+    <div class="decorative-break">
+        <img src="assets/images/Fancy-Flourish-Divider-2.svg" alt="Flourish design">
+
+    </div>
+      
+
+    <!-- Cards Section -->
+    <section class="cards-section">
+        <div class="card-container">
+            <div class="card">
+              <img src="assets/images/decentralized.png" alt="decentralized">
+              <h3>decentralized</h3>
+              <p>Draws mobile app screens before design them to know who the app will be.</p>
+            </div>
+            <div class="card">
+              <img src="assets/images/framework.png" alt="framework">
+              <h3>Framework</h3>
+              <p>Shows every action and screens that appear by user actions.</p>
+            </div>
+            <div class="card">
+              <img src="assets/images/network.png" alt="Network">
+              <h3>Mobile Design</h3>
+              <p>Designs mobile app screens by adding items, colors and buttons.</p>
+            </div>
+            <div class="card">
+              <img src="assets/images/structured-data.png" alt="Structures">
+              <h3>Structures</h3>
+              <p>Designs website screens by adding items, colors and buttons.</p>
+            </div>
+        </div>
+        <!-- Decorative flourish after cards -->
+        <div class="decorative-break">
+            <img src="assets/images/Fancy-Flourish-Divider-2.svg" alt="Flourish design">
+        </div>
+          
+        <!-- <button>Meet the Team</button>
+        <div class="cards">
+            <div class="card">
+                <img src="assets/images/decentralized.png" alt="decentralized">
+                <h3></h3>
+            </div>
+            <div class="card">
+                <img src="assets/images/avatar2.jpg" alt="Avatar 2">
+                <h3>Person 2</h3>
+            </div>
+            <div class="card">
+                <img src="assets/images/avatar3.jpg" alt="Avatar 3">
+                <h3>Person 3</h3>
+            </div>
+            <div class="card">
+                <img src="assets/images/avatar4.jpg" alt="Avatar 4">
+                <h3>Person 4</h3>
+            </div>
+        </div> -->
+        <button>Explore More</button>
+    </section>
+
+</body>
+</html>
